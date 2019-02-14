@@ -7,7 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-> date-fns for Nuxt.js
+> Modern JavaScript date utility library - **date-fns** for Nuxt.js.
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
@@ -24,9 +24,82 @@
     '@nuxtjs/date-fns',
 
     // With options
-    ['@nuxtjs/date-fns', { /* module options */ }],
+    ['@nuxtjs/date-fns', {
+      locales: ['de', 'ru', 'es']
+      defaultLocale: 'de',
+      format: 'YYYY-MM-DD'
+    }],
  ]
 }
+```
+
+### Using top level options
+
+```js
+{
+  modules: [
+    // Simple usage
+    '@nuxtjs/date-fns'
+ ],
+ dateFns: {
+    locales: ['de', 'ru', 'es']
+    defaultLocale: 'de',
+    format: 'YYYY-MM-DD'
+  }
+}
+```
+
+## Options
+
+### `locales`
+
+- Default: `[]`
+
+Locales to be imported.
+
+### `defaultLocale`
+
+- Default: `null`
+
+You can preset default locale.
+
+### `format`
+
+- Default: `null`
+
+You can preset default format.
+
+## Usage
+
+This module inject `$dateFns` to your project:
+
+```html
+<template>
+  <div>
+    // Using default format and locale
+    {{ $dateFns.format(new Date()) }} 
+
+    // Using custom format
+    {{ $dateFns.format(new Date(), 'YYYY-MM-DDDD') }} 
+
+    // Using custom format and locale
+    {{ $dateFns.format(new Date(), 'YYYY-MM-DDDD', { locale: 'ru' }) }}
+
+    // Using asyncData
+    {{ dateFormatted }}
+  </div>
+</template>
+
+<script>
+export default {
+  asyncData(ctx) {
+    return {
+      // $dateFns is available in context
+      dateFormatted: ctx.app.$dateFns.format(new Date())
+    }
+  }
+}
+</script>
 ```
 
 ## Development
