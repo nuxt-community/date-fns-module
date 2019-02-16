@@ -38,7 +38,6 @@
 ```js
 {
   modules: [
-    // Simple usage
     '@nuxtjs/date-fns'
  ],
  dateFns: {
