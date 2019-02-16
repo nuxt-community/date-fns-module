@@ -39,8 +39,8 @@
 {
   modules: [
     '@nuxtjs/date-fns'
- ],
- dateFns: {
+  ],
+  dateFns: {
     locales: ['de', 'ru', 'es']
     defaultLocale: 'de',
     format: 'YYYY-MM-DD'
