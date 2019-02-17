@@ -7,7 +7,7 @@
 [![Dependencies][david-dm-src]][david-dm-href]
 [![Standard JS][standard-js-src]][standard-js-href]
 
-> Modern JavaScript date utility library - **date-fns** for Nuxt.js.
+> Modern JavaScript date utility library - [date-fns](https://date-fns.org/) for Nuxt.js
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
