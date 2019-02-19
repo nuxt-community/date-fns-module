@@ -13,7 +13,7 @@
 
 ## Setup
 
-1. Add the `@nuxtjs/date-fns` dependency with `yarn` or `npm` into your project
+1. Add the `@nuxtjs/date-fns` dependency with `yarn` or `npm` to your project
 2. Add `@nuxtjs/date-fns` to the `modules` section of `nuxt.config.js`
 3. Configure it:
 
