@@ -13,7 +13,6 @@ const get = path => request(url(path))
 
 describe('module', () => {
   beforeAll(async () => {
-    config.dev = false
     nuxt = new Nuxt(config)
     await new Builder(nuxt).build()
     port = await getPort()
