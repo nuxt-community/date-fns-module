@@ -28,8 +28,8 @@
       locales: ['de', 'ru', 'es']
       defaultLocale: 'de',
       format: 'YYYY-MM-DD'
-    }],
- ]
+    }]
+  ]
 }
 ```
 
