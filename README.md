@@ -25,7 +25,7 @@
 
     // With options
     ['@nuxtjs/date-fns', {
-      locales: ['de', 'ru', 'es']
+      locales: ['de', 'ru', 'es'],
       defaultLocale: 'de',
       format: 'YYYY-MM-DD'
     }]
@@ -41,7 +41,7 @@
     '@nuxtjs/date-fns'
   ],
   dateFns: {
-    locales: ['de', 'ru', 'es']
+    locales: ['de', 'ru', 'es'],
     defaultLocale: 'de',
     format: 'YYYY-MM-DD'
   }
