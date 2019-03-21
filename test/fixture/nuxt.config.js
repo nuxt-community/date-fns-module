@@ -8,9 +8,10 @@ module.exports = {
     resourceHints: false
   },
   modules: [
-    [require('../../'), ['es', 'ru']]
+    { handler: require('../../') }
   ],
   dateFns: {
+    locales: ['es', 'ru'],
     defaultLocale: 'de',
     format: 'YYYY-MM-DD'
   }
