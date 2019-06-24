@@ -1,3 +1,5 @@
+import Vue from 'vue'
+
 interface DateFns {
   addDays(date: Date | string | number, amount: number): Date
   addHours(date: Date | string | number, amount: number): Date
@@ -148,7 +150,7 @@ interface DateFns {
   isThursday(date: Date | string | number): boolean
   isToday(date: Date | string | number): boolean
   isTomorrow(date: Date | string | number): boolean
-  isTuesday(date: Date | string | number): boolea
+  isTuesday(date: Date | string | number): boolean
   isValid(date: Date): boolean
   isWednesday(date: Date | string | number): boolean
   isWeekend(date: Date | string | number): boolean
