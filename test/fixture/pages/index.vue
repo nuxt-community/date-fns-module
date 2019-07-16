@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  asyncData(ctx) {
+  asyncData (ctx) {
     return {
       str: ctx.app.$dateFns.format('1995-12-25', 'MMMM')
     }
