@@ -4,8 +4,7 @@
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![Circle CI][circle-ci-src]][circle-ci-href]
 [![Codecov][codecov-src]][codecov-href]
-[![Dependencies][david-dm-src]][david-dm-href]
-[![Standard JS][standard-js-src]][standard-js-href]
+[![License][license-src]][license-href]
 
 > Modern JavaScript date utility library - [date-fns](https://date-fns.org/) for Nuxt.js
 
@@ -13,9 +12,13 @@
 
 ## Setup
 
-1. Add the `@nuxtjs/date-fns` dependency with `yarn` or `npm` to your project
+1. Add `@nuxtjs/date-fns` dependency to your project
+
+```bash
+yarn add @nuxtjs/date-fns # or npm install @nuxtjs/date-fns
+```
+
 2. Add `@nuxtjs/date-fns` to the `modules` section of `nuxt.config.js`
-3. Configure it:
 
 ```js
 {
@@ -24,11 +27,7 @@
     '@nuxtjs/date-fns',
 
     // With options
-    ['@nuxtjs/date-fns', {
-      locales: ['de', 'ru', 'es'],
-      defaultLocale: 'de',
-      format: 'YYYY-MM-DD'
-    }]
+    ['@nuxtjs/date-fns', { /* module options */ }]
   ]
 }
 ```
@@ -41,9 +40,7 @@
     '@nuxtjs/date-fns'
   ],
   dateFns: {
-    locales: ['de', 'ru', 'es'],
-    defaultLocale: 'de',
-    format: 'YYYY-MM-DD'
+    /* module options */
   }
 }
 ```
@@ -114,10 +111,10 @@ export default {
 Copyright (c) Nuxt Community
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/dt/@nuxtjs/date-fns.svg?style=flat-square
+[npm-version-src]: https://img.shields.io/npm/v/@nuxtjs/date-fns/latest.svg?style=flat-square
 [npm-version-href]: https://npmjs.com/package/@nuxtjs/date-fns
 
-[npm-downloads-src]: https://img.shields.io/npm/v/@nuxtjs/date-fns/latest.svg?style=flat-square
+[npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/date-fns.svg?style=flat-square
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/date-fns
 
 [circle-ci-src]: https://img.shields.io/circleci/project/github/nuxt-community/date-fns-module.svg?style=flat-square
@@ -126,8 +123,5 @@ Copyright (c) Nuxt Community
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/date-fns-module.svg?style=flat-square
 [codecov-href]: https://codecov.io/gh/nuxt-community/date-fns-module
 
-[david-dm-src]: https://david-dm.org/nuxt-community/date-fns-module/status.svg?style=flat-square
-[david-dm-href]: https://david-dm.org/nuxt-community/date-fns-module
-
-[standard-js-src]: https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square
-[standard-js-href]: https://standardjs.com
+[license-src]: https://img.shields.io/npm/l/@nuxtjs/date-fns.svg?style=flat-square
+[license-href]: https://npmjs.com/package/@nuxtjs/date-fns
