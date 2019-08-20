@@ -213,6 +213,13 @@ declare module '@nuxt/vue-app' {
   }
 }
 
+// Nuxt 2.9+
+declare module '@nuxt/types' {
+  interface Context {
+    readonly $dateFns: DateFns
+  }
+}
+
 declare module 'vue/types/vue' {
   interface Vue {
     readonly $dateFns: DateFns
