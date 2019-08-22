@@ -1,26 +1,8 @@
 jest.setTimeout(60000)
 
-const { Nuxt, Builder } = require('nuxt-edge')
-const request = require('request-promise-native')
-const getPort = require('get-port')
+const { setup, loadConfig, get, url } = require('@nuxtjs/module-test-utils')
 
-const config = require('./fixture/nuxt.config')
-config.dev = false
-
-let nuxt, port
-
-const url = path => `http://localhost:${port}${path}`
-const get = path => request(url(path))
-
-const setupNuxt = async (config) => {
-  const nuxt = new Nuxt(config)
-  await nuxt.ready()
-  await new Builder(nuxt).build()
-  port = await getPort()
-  await nuxt.listen(port)
-
-  return nuxt
-}
+let nuxt
 
 const testSuite = (month = 'Dezember') => {
   test('dateFns should be defined', async () => {
@@ -46,13 +28,11 @@ const testSuite = (month = 'Dezember') => {
 
 describe('module', () => {
   beforeAll(async () => {
-    nuxt = await setupNuxt(config)
+    ({ nuxt } = (await setup(loadConfig(__dirname))))
   })
 
   afterAll(async () => {
-    if (nuxt) {
-      await nuxt.close()
-    }
+    await nuxt.close()
   })
 
   testSuite()
@@ -60,18 +40,16 @@ describe('module', () => {
 
 describe('module options as array', () => {
   beforeAll(async () => {
-    nuxt = await setupNuxt({
-      ...config,
+    ({ nuxt } = (await setup({
+      ...loadConfig(__dirname),
       modules: [
         [require('../'), ['es', 'ru']]
       ]
-    })
+    })))
   })
 
   afterAll(async () => {
-    if (nuxt) {
-      await nuxt.close()
-    }
+    await nuxt.close()
   })
 
   testSuite()
@@ -79,18 +57,16 @@ describe('module options as array', () => {
 
 describe('with default locale', () => {
   beforeAll(async () => {
-    nuxt = await setupNuxt({
-      ...config,
+    ({ nuxt } = (await setup({
+      ...loadConfig(__dirname),
       dateFns: {
         locales: ['es', 'ru']
       }
-    })
+    })))
   })
 
   afterAll(async () => {
-    if (nuxt) {
-      await nuxt.close()
-    }
+    await nuxt.close()
   })
 
   testSuite('December')
