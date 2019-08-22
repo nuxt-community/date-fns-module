@@ -1,6 +1,14 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [0.1.2](https://github.com/nuxt-community/date-fns-module/compare/v0.1.1...v0.1.2) (2019-08-22)
+
+
+### Features
+
+* provide nuxt 2.9 compatible types ([#8](https://github.com/nuxt-community/date-fns-module/issues/8)) ([69ea718](https://github.com/nuxt-community/date-fns-module/commit/69ea718))
+* support `date-fns` in `nuxt.config` ([6898cf7](https://github.com/nuxt-community/date-fns-module/commit/6898cf7))
 
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/nuxt-community/date-fns-module/compare/v0.1.0...v0.1.1) (2019-06-24)
