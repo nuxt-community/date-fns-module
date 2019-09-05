@@ -1,8 +1,8 @@
 <template>
   <div>
-    {{ $dateFns.format('1995-12-25', 'dddd', { locale: 'es' }) }}
+    {{ $dateFns.format('1995-12-25', 'EEEE', { locale: 'es' }) }}
     <p v-text="str" />
-    {{ $dateFns.format('1995-12-25', 'YYYY') }}
+    {{ $dateFns.format('1995-12-25', 'yyyy') }}
   </div>
 </template>
 

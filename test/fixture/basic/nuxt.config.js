@@ -7,8 +7,8 @@ module.exports = {
     { handler: require('../../../') }
   ],
   dateFns: {
-    locales: ['es', 'ru'],
-    defaultLocale: 'de',
-    format: 'YYYY-MM-DD'
+    locales: ['es', 'ru', 'pt-BR'],
+    defaultLocale: 'en-US',
+    format: 'yyyy-MM-dd'
   }
 }

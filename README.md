@@ -73,13 +73,13 @@ This module inject `$dateFns` to your project:
 <template>
   <div>
     // Using default format and locale
-    {{ $dateFns.format(new Date()) }} 
+    {{ $dateFns.format(new Date()) }}
 
     // Using custom format
-    {{ $dateFns.format(new Date(), 'YYYY-MM-DDDD') }} 
+    {{ $dateFns.format(new Date(), 'yyyy-MM-dd') }}
 
     // Using custom format and locale
-    {{ $dateFns.format(new Date(), 'YYYY-MM-DDDD', { locale: 'ru' }) }}
+    {{ $dateFns.format(new Date(), 'yyyy-MM-dd', { locale: 'ru' }) }}
 
     // Using asyncData
     {{ dateFormatted }}

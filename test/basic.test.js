@@ -23,7 +23,7 @@ describe('basic', () => {
 
   test('render month', async () => {
     const window = await nuxt.renderAndGetWindow(url('/'))
-    expect(window.document.querySelector('p').textContent).toBe('Dezember')
+    expect(window.document.querySelector('p').textContent).toBe('December')
   })
 
   test('render year', async () => {
