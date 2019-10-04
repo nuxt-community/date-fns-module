@@ -15,14 +15,16 @@
 1. Add `@nuxtjs/date-fns` dependency to your project
 
 ```bash
-yarn add @nuxtjs/date-fns # or npm install @nuxtjs/date-fns
+yarn add --dev @nuxtjs/date-fns # or npm install --save-dev @nuxtjs/date-fns
 ```
 
-2. Add `@nuxtjs/date-fns` to the `modules` section of `nuxt.config.js`
+2. Add `@nuxtjs/date-fns` to the `buildModules` section of `nuxt.config.js`
+
+:warning: If you are using Nuxt `< 2.9.0`, use `modules` instead.
 
 ```js
 {
-  modules: [
+  buildModules: [
     // Simple usage
     '@nuxtjs/date-fns',
 
@@ -36,7 +38,7 @@ yarn add @nuxtjs/date-fns # or npm install @nuxtjs/date-fns
 
 ```js
 {
-  modules: [
+  buildModules: [
     '@nuxtjs/date-fns'
   ],
   dateFns: {
