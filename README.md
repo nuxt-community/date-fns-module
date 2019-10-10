@@ -6,7 +6,7 @@
 [![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> Modern JavaScript date utility library - [date-fns](https://date-fns.org/) for Nuxt.js
+> Modern JavaScript date utility library - date-fns for Nuxt.js
 
 [📖 **Release Notes**](./CHANGELOG.md)
 
