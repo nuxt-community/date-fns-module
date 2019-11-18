@@ -19,3 +19,9 @@ declare module 'vue/types/vue' {
     readonly $dateFns: dateFns
   }
 }
+
+declare module 'vuex/types/index' {
+  interface Store<S> {
+    readonly $dateFns: dateFns
+  }
+}
