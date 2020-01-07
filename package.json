@@ -22,16 +22,16 @@
     "date-fns": "^2.8.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "latest",
-    "@commitlint/config-conventional": "latest",
-    "@nuxtjs/eslint-config": "latest",
-    "@nuxtjs/module-test-utils": "latest",
-    "codecov": "latest",
-    "eslint": "latest",
-    "husky": "latest",
+    "@commitlint/cli": "^8.3.4",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@nuxtjs/eslint-config": "^2.0.0",
+    "@nuxtjs/module-test-utils": "^1.5.0",
+    "codecov": "^3.6.1",
+    "eslint": "^6.8.0",
+    "husky": "^4.0.0",
     "jest": "latest",
-    "nuxt-edge": "latest",
-    "standard-version": "latest"
+    "nuxt-edge": "^2.11.1-26305929.67ad293a",
+    "standard-version": "^7.0.1"
   },
   "publishConfig": {
     "access": "public"

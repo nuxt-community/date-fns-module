@@ -93,6 +93,13 @@ You can preset default locale.
 
 You can preset default format.
 
+### `methods`
+
+- Type: `Array`
+- Default: `null`
+
+Methods to be imported. If not defined all methods are imported.
+
 ## Usage
 
 This module inject `$dateFns` to your project:
