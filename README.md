@@ -20,8 +20,6 @@ yarn add --dev @nuxtjs/date-fns # or npm install --save-dev @nuxtjs/date-fns
 
 2. Add `@nuxtjs/date-fns` to the `buildModules` section of `nuxt.config.js`
 
-:warning: If you are using Nuxt older than **v2.9** you have to install module as a `dependency` (No `--dev` or `--save-dev` flags) and also use `modules` section in `nuxt.config.js` instead of `buildModules`.
-
 ```js
 export default {
   buildModules: [
@@ -33,6 +31,8 @@ export default {
   ]
 }
 ```
+
+:warning: If you are using Nuxt **< v2.9** you have to install the module as a `dependency` (No `--dev` or `--save-dev` flags) and use `modules` section in `nuxt.config.js` instead of `buildModules`.
 
 ### Using top level options
 
