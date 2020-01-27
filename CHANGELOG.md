@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/nuxt-community/date-fns-module/compare/v1.1.0...v1.2.0) (2020-01-27)
+
+
+### Features
+
+* make injected date-fns treeshakeable ([#25](https://github.com/nuxt-community/date-fns-module/issues/25)) ([f6517cf](https://github.com/nuxt-community/date-fns-module/commit/f6517cf2976757a1305485649f6023ab6aa1c095))
+
 ## [1.1.0](https://github.com/nuxt-community/date-fns-module/compare/v1.0.0...v1.1.0) (2019-11-18)
 
 
