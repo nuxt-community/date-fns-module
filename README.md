@@ -146,8 +146,8 @@ Copyright (c) Nuxt Community
 [npm-downloads-src]: https://img.shields.io/npm/dt/@nuxtjs/date-fns.svg
 [npm-downloads-href]: https://npmjs.com/package/@nuxtjs/date-fns
 
-[github-actions-ci-src]: https://github.com/nuxt-community/robots-module/workflows/ci/badge.svg
-[github-actions-ci-href]: https://github.com/nuxt-community/robots-module/actions?query=workflow%3Aci
+[github-actions-ci-src]: https://github.com/nuxt-community/date-fns-module/workflows/ci/badge.svg
+[github-actions-ci-href]: https://github.com/nuxt-community/date-fns-module/actions?query=workflow%3Aci
 
 [codecov-src]: https://img.shields.io/codecov/c/github/nuxt-community/date-fns-module.svg
 [codecov-href]: https://codecov.io/gh/nuxt-community/date-fns-module
