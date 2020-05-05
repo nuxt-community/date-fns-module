@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/nuxt-community/date-fns-module/compare/v1.2.0...v1.3.0) (2020-05-05)
+
+
+### Features
+
+* add `formatDistanceToNowStrict` ([86b2601](https://github.com/nuxt-community/date-fns-module/commit/86b260175f21555f27326d47cc030277bdc6b8bd))
+
+
+### Bug Fixes
+
+* types ([ca48455](https://github.com/nuxt-community/date-fns-module/commit/ca484551fd9528f201494e299ebcb06ca783bbac))
+
 ## [1.2.0](https://github.com/nuxt-community/date-fns-module/compare/v1.1.0...v1.2.0) (2020-01-27)
 
 
