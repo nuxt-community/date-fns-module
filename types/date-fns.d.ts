@@ -1,6 +1,8 @@
 import { Interval, Locale } from 'date-fns'
 
-export interface dateFns {
+interface dateFns {
+  add(date: Date | number, duration: Duration): Date
+
   addBusinessDays(date: Date | number, amount: number): Date
 
   addDays(date: Date | number, amount: number): Date
@@ -25,7 +27,10 @@ export interface dateFns {
 
   areIntervalsOverlapping(
     intervalLeft: Interval,
-    intervalRight: Interval
+    intervalRight: Interval,
+    options?: {
+      inclusive?: boolean
+    }
   ): boolean
 
   closestIndexTo(
@@ -119,6 +124,8 @@ export interface dateFns {
     }
   ): Date[]
 
+  eachMonthOfInterval(interval: Interval): Date[]
+
   eachWeekendOfInterval(interval: Interval): Date[]
 
   eachWeekendOfMonth(date: Date | number): Date[]
@@ -132,6 +139,8 @@ export interface dateFns {
       weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6
     }
   ): Date[]
+
+  eachYearOfInterval(interval: Interval): Date[]
 
   endOfDay(date: Date | number): Date
 
@@ -214,6 +223,34 @@ export interface dateFns {
     }
   ): string
 
+  formatDistanceToNowStrict(
+    date: Date | number,
+    options?: {
+      addSuffix?: boolean
+      unit?: 'second' | 'minute' | 'hour' | 'day' | 'month' | 'year'
+      roundingMethod?: 'floor' | 'ceil' | 'round'
+      locale?: Locale
+    }
+  ): string
+
+  formatISO(
+    date: Date | number,
+    options?: {
+      format?: 'extended' | 'basic'
+      representation?: 'complete' | 'date' | 'time'
+    }
+  ): string
+
+  formatISO9075(
+    date: Date | number,
+    options?: {
+      format?: 'extended' | 'basic'
+      representation?: 'complete' | 'date' | 'time'
+    }
+  ): string
+
+  formatISODuration(duration: Duration): string
+
   formatRelative(
     date: Date | number,
     baseDate: Date | number,
@@ -223,11 +260,20 @@ export interface dateFns {
     }
   ): string
 
+  formatRFC3339(
+    date: Date | number,
+    options?: {
+      fractionDigits?: 0 | 1 | 2 | 3
+    }
+  ): string
+
+  formatRFC7231(date: Date | number): string
+
   fromUnixTime(unixTime: number): Date
 
   getDate(date: Date | number): number
 
-  getDay(date: Date | number): number
+  getDay(date: Date | number): 0 | 1 | 2 | 3 | 4 | 5 | 6
 
   getDayOfYear(date: Date | number): number
 
@@ -302,6 +348,8 @@ export interface dateFns {
 
   getYear(date: Date | number): number
 
+  intervalToDuration(interval: Interval): Duration
+
   isAfter(date: Date | number, dateToCompare: Date | number): boolean
 
   isBefore(date: Date | number, dateToCompare: Date | number): boolean
@@ -309,6 +357,8 @@ export interface dateFns {
   isDate(value: any): boolean
 
   isEqual(dateLeft: Date | number, dateRight: Date | number): boolean
+
+  isExists(year: number, month: number, day: number): boolean
 
   isFirstDayOfMonth(date: Date | number): boolean
 
@@ -429,7 +479,7 @@ export interface dateFns {
   parse(
     dateString: string,
     formatString: string,
-    backupDate: Date | number,
+    referenceDate: Date | number,
     options?: {
       locale?: Locale
       weekStartsOn?: 0 | 1 | 2 | 3 | 4 | 5 | 6
@@ -446,10 +496,25 @@ export interface dateFns {
     }
   ): Date
 
+  parseJSON(argument: string | number | Date): Date
+
   roundToNearestMinutes(
     date: Date | number,
     options?: {
       nearestTo?: number
+    }
+  ): Date
+
+  set(
+    date: Date | number,
+    values: {
+      year?: number
+      month?: number
+      date?: number
+      hours?: number
+      minutes?: number
+      seconds?: number
+      milliseconds?: number
     }
   ): Date
 
@@ -548,6 +613,10 @@ export interface dateFns {
   startOfYear(date: Date | number): Date
 
   startOfYesterday(): Date
+
+  sub(date: Date | number, duration: Duration): Date
+
+  subBusinessDays(date: Date | number, amount: number): Date
 
   subDays(date: Date | number, amount: number): Date
 
