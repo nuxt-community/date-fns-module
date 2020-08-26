@@ -123,10 +123,9 @@ This module inject `$dateFns` to your project:
 
 <script>
 export default {
-  asyncData(ctx) {
+  asyncData({ $dateFns }) {
     return {
-      // $dateFns is available in context
-      dateFormatted: ctx.app.$dateFns.format(new Date())
+      dateFormatted: $dateFns.format(new Date())
     }
   }
 }
