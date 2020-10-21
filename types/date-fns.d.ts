@@ -1,4 +1,4 @@
-import { Interval, Locale } from 'date-fns'
+import { Interval, Locale, Duration } from 'date-fns'
 
 interface dateFns {
   add(date: Date | number, duration: Duration): Date
@@ -229,6 +229,16 @@ interface dateFns {
       addSuffix?: boolean
       unit?: 'second' | 'minute' | 'hour' | 'day' | 'month' | 'year'
       roundingMethod?: 'floor' | 'ceil' | 'round'
+      locale?: Locale
+    }
+  ): string
+
+  formatDuration(
+    duration: Duration,
+    options?: {
+      format?: string[]
+      zero?: boolean
+      delimiter?: string
       locale?: Locale
     }
   ): string
