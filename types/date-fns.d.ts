@@ -1,4 +1,6 @@
-import { Interval, Locale, Duration } from 'date-fns'
+import { Interval, Locale as LocaleDateFns, Duration } from 'date-fns'
+
+type Locale = LocaleDateFns | string
 
 interface dateFns {
   add(date: Date | number, duration: Duration): Date
