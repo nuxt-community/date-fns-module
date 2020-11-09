@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/nuxt-community/date-fns-module/compare/v1.4.1...v1.4.2) (2020-11-09)
+
+
+### Bug Fixes
+
+* type Locale ([#46](https://github.com/nuxt-community/date-fns-module/issues/46)) ([3f45c49](https://github.com/nuxt-community/date-fns-module/commit/3f45c4939671b74e1617da01b3e36c9a4d503495))
+
 ### [1.4.1](https://github.com/nuxt-community/date-fns-module/compare/v1.4.0...v1.4.1) (2020-10-21)
 
 
