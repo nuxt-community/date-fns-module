@@ -1,6 +1,6 @@
 {
   "name": "@nuxtjs/date-fns",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Modern JavaScript date utility library - date-fns for Nuxt.js",
   "repository": "nuxt-community/date-fns-module",
   "license": "MIT",
