@@ -1,27 +1,35 @@
 import Vue from 'vue'
-import { dateFns } from './date-fns'
+import { NuxtDateFnsInstance } from './date-fns'
 
 declare module '@nuxt/vue-app' {
   interface Context {
-    readonly $dateFns: dateFns
+    $dateFns: NuxtDateFnsInstance
+  }
+
+  interface NuxtAppOptions {
+    $dateFns: NuxtDateFnsInstance
   }
 }
 
 // Nuxt 2.9+
 declare module '@nuxt/types' {
   interface Context {
-    readonly $dateFns: dateFns
+    $dateFns: NuxtDateFnsInstance
+  }
+
+  interface NuxtAppOptions {
+    $dateFns: NuxtDateFnsInstance
   }
 }
 
 declare module 'vue/types/vue' {
   interface Vue {
-    readonly $dateFns: dateFns
+    $dateFns: NuxtDateFnsInstance
   }
 }
 
 declare module 'vuex/types/index' {
   interface Store<S> {
-    readonly $dateFns: dateFns
+    $dateFns: NuxtDateFnsInstance
   }
 }
