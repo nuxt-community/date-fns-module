@@ -86,6 +86,13 @@ Locales to be imported.
 
 You can preset default locale.
 
+### `fallbackLocale`
+
+- Type: `String`
+- Default: `null`
+
+You can preset a fallback locale for when a method is called with an unsupported locale.
+
 ### `format`
 
 - Type: `String`
