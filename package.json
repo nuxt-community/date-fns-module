@@ -20,7 +20,7 @@
     "test": "yarn lint && jest"
   },
   "dependencies": {
-    "date-fns": "^2.19.0"
+    "date-fns": "^2.30.0"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
